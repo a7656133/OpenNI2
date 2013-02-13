@@ -6,8 +6,8 @@ package openni.java;
 
 /**
  *
- * @author Dumouse
+ * @author clebeson
  */
 public class NativeMethods {
-    
+   
 }
