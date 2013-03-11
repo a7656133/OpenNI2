@@ -74,7 +74,7 @@ JNIEXPORT jboolean JNICALL Java_openni_java_CameraSettings_isValid
  */
 JNIEXPORT jlong JNICALL Java_openni_java_CameraSettings_CameraSettings__
 (JNIEnv *, jobject ) {
-    openni::CameraSettings *cam;
+    openni::CameraSettings *cam= new openni::CameraSettings();
     
     return (jlong)cam;
 }
