@@ -26,8 +26,13 @@ public class Recorder extends ObjectWrapper {
 
     private native long recorder();
 
+    
+    
+     public Recorder() {
+        setObjectWrapper(recorder());
+    }
     public Recorder(long ptr) {
-        super(ptr);
+        setObjectWrapper(ptr);
     }
 
     public int create(String fileName) {

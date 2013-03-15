@@ -20,9 +20,10 @@ private native void Array(long data,int count);
     protected void freeObject(long ptr) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-
+    
+    
     public Array(long ptr){
-        super(ptr);
+       setObjectWrapper(ptr); 
     }
 
         

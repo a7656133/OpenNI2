@@ -18,8 +18,12 @@ class VideoMode extends ObjectWrapper{
     private native void setResolution(int resolutionX, int resolutionY,long myNativeObject);
     private native void setFps(int fps,long myNativeObject); 
     private native long videoMode();
+    
+    public VideoMode() {
+        setObjectWrapper(videoMode());
+    }
     public VideoMode(long ptr) {
-        super(ptr);
+        setObjectWrapper(ptr);
     }
 
     

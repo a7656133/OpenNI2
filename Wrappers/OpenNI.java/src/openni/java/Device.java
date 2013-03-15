@@ -28,8 +28,12 @@ class Device extends ObjectWrapper{
        private native boolean isCommandSupported(int commandId,long myNativeObject);
        private native long Device();
 
+    public Device() {
+          setObjectWrapper(Device());
+    }    
+       
     public Device(long ptr) {
-        super(ptr);
+        setObjectWrapper(ptr);
     }
       
     

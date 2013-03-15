@@ -37,9 +37,11 @@ class VideoStream  extends ObjectWrapper{
         private  native boolean isCommandSupported(int commandId,long myNativeObject);
         private native long Videotream();
 
-
+    public VideoStream() {
+        setObjectWrapper(Videotream());
+    }
     public VideoStream(long ptr) {
-        super(ptr);
+        setObjectWrapper(ptr);
     }
 
       

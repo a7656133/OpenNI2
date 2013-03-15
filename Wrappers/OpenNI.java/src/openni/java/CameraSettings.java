@@ -18,9 +18,12 @@ public class CameraSettings extends ObjectWrapper{
        private native boolean isValid(long myNativeObject);
        private native long CameraSettings();
 
-       public  CameraSettings(long ptr) {
-        super(ptr);
-        }
+    public CameraSettings() {
+     setObjectWrapper(CameraSettings());       
+    }    
+    public CameraSettings(long CameraSettings) {
+        setObjectWrapper(CameraSettings);
+    }
 
     @Override
     protected void freeObject(long ptr) {
@@ -50,6 +53,10 @@ return getAutoWhiteBalanceEnabled(myNativeObject());
 public boolean isValid(){
     return isValid(myNativeObject());
 }
+
+    
+
+    
 
    
 	

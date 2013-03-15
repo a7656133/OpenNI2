@@ -16,10 +16,11 @@ class PlaybackControl extends ObjectWrapper{
        private native  int seek(long stream, int frameIndex,long myNativeObject);//status
        private native int getNumberOfFrames(long stream,long myNativeObject);
        private native boolean isValid(long myNativeObject);
-  //     private native long PlaybackControl(long pDevice); 
+       private native long PlaybackControl(); 
        
+
     public PlaybackControl(long ptr) {
-        super(ptr);
+        setObjectWrapper(ptr);
     }
        
     

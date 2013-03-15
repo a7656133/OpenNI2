@@ -16,8 +16,13 @@ class DeviceInfo extends ObjectWrapper{
     private native short getUsbProductId(long myNativeObject);
     private native long deviceInfo();
 
-    public DeviceInfo(long ptr) {
-        super(ptr);
+    public DeviceInfo() {
+      setObjectWrapper(deviceInfo());  
+    }
+
+    
+    public  DeviceInfo(long ptr) {
+        setObjectWrapper(ptr);
     }
 
     

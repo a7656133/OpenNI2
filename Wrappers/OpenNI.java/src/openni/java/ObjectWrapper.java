@@ -10,8 +10,8 @@ package openni.java;
  */
 public abstract class ObjectWrapper
 {
-    
-public ObjectWrapper(long ptr)
+
+public void setObjectWrapper(long ptr)
 {
 if (ptr == 0)
 {
@@ -19,7 +19,6 @@ throw new NullPointerException("JavaWrapper: Trying to wrap a null object!");
 }
 this.ptr = ptr;
 }
-
 public long myNativeObject()
 {
 return this.ptr;

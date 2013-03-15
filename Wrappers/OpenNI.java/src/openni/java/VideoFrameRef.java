@@ -28,8 +28,11 @@ class VideoFrameRef extends ObjectWrapper{
     private native void release(long myNativeObject);
     private native long videoFrameRef();
 
+    public VideoFrameRef() {
+        setObjectWrapper(videoFrameRef());
+    }
     public VideoFrameRef(long ptr) {
-        super(ptr);
+        setObjectWrapper(ptr);
     }
 
 public int getDataSize()

@@ -13,7 +13,7 @@ class SensorInfo extends ObjectWrapper{
     private native long getSupportedVideoModes(long myNativeObject); 
 
     public SensorInfo(long ptr) {
-        super(ptr);
+        setObjectWrapper(ptr);
     }
   
 public int  getSensorType(){ 
